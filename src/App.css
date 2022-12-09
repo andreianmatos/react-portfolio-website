@@ -7,10 +7,78 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
+/* scroll bar */
 
-/* SIDEBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2ebe5; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #647295; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* buttons */
+
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+/* SIDEBAR MENU */
 
 .Sidebar {
   height: 100%;
@@ -42,7 +110,6 @@ body {
   flex: 30%;
   display: grid;
   place-items: center;
-  color: #647295;
 }
 
 .row #title {
@@ -64,9 +131,127 @@ body {
   background-color: #2b262d;
   color:#f2ebe5;
   height: 100%;  
-  width: 100%;
-  justify-content: center;
+  width: 82%;
+  margin-left: 18%;
 }
+
+/*PROFILE*/
+
+.profile-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color:#f2ebe5;
+}
+
+.profile-details-name{
+  font-size: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.profile-details-role{
+  display: flex;
+  flex-direction: column;
+  margin: 1% 0 1% 0;
+  font-size: 10px;
+}
+
+.profile-details-h1{
+  font-size: 40px;
+}
+
+.primary-text{
+  color: white;
+}
+
+.highlighted-text{
+  color: gray;
+}
+
+.profile-role-tagline{
+  font-size: 19px;
+  margin: 1% 0 0 0;
+}
+
+.profile-options .highlighted-btn {
+  margin: 0 0 0 28px;
+}
+
+.profile-options .highlighted-btn:hover {
+  margin: 0 0 0 28px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.profile-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 20vh;
+  width: 20vh;
+  margin-top: 8%;
+  margin-bottom: 2%;
+  box-shadow: 0 1px 0px 0px whitesmoke;
+}
+
+.profile-picture-background {
+  height: 92%;
+  width: 92%;
+  background-image: url('assets/Home/profilephoto.jpg');
+  background-size: cover;  
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile-picture-background:hover {
+  transform: scale(1.07);
+  transition: 1s ease-out;
+}
+
+#linkedInIcon {
+  color: whitesmoke;
+}
+
+#contactButton {
+  margin-top: 10%;
+}
+
+/* FOOTER  */
+
+.footer-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 7%;
+}
+
+.footer-parent {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+}
+
+.footer-parent img {
+  max-width: 100%;
+  height: 20vh;
+}
+
+@media only screen and (max-width: 1110px){
+  .footer-parent {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
 
 /* ABOUT */
 
@@ -74,7 +259,9 @@ body {
   background-color: #f2ebe5;
   color:#2b262d;
   height: 100%;
-  width: 100%;
+  width: 82%;
+  margin-left: 18%;
+  display: flex;
   justify-content: center;
 }
 
@@ -84,7 +271,9 @@ body {
   background-color: #f2ebe5;
   color:#2b262d;
   height: 100%;
-  width: 100%;
+  width: 82%;
+  margin-left: 18%;
+  display: flex;
   justify-content: center;
 }
 
@@ -94,6 +283,8 @@ body {
   background-color: #f2ebe5;
   color:#2b262d;
   height: 100%;
-  width: 100%;
+  width: 82%;
+  margin-left: 18%;
+  display: flex;
   justify-content: center;
 }
