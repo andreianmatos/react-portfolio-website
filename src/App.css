@@ -1,0 +1,99 @@
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2ebe5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* SIDEBAR */
+
+.Sidebar {
+  height: 100%;
+  width: 18%; 
+  border-right: 1px solid #f2ebe5;
+  position: fixed;
+  background-color: #2b262d;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  padding-top: 50%;
+  width: 100%;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height:60px;
+  display: flex;
+  list-style-type: none;
+  color: white;
+  align-items: center;
+  font-size: larger;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+  color: #647295;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+#active {
+  color: #647295 !important;
+}
+
+.row #title:hover {
+  cursor: pointer;
+  color: #647295;
+}
+
+/* HOME */
+
+.Home{
+  background-color: #2b262d;
+  color:#f2ebe5;
+  height: 100%;  
+  width: 100%;
+  justify-content: center;
+}
+
+/* ABOUT */
+
+.About{
+  background-color: #f2ebe5;
+  color:#2b262d;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+/* CONTACT */
+
+.Contact{
+  background-color: #f2ebe5;
+  color:#2b262d;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+/* SERVICES */
+
+.Services{
+  background-color: #f2ebe5;
+  color:#2b262d;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
