@@ -16,28 +16,15 @@ function Profile() {
                         <div className='profile-details-name'>
                             <span className='primary-text'>
                                 {" "}
-                                <span className='highlighted-text'>Sofia Sá</span>
+                                <span className='highlighted-text'><b>Sofia Sá</b></span>
                             </span>
                         </div>
                         <div className='profile-details-role'>
                             <span className='primary-text'>
-                                {" "}
                                 <h1>
-                                    {" "}
-                                    <Typical 
-                                    loop = {Infinity}
-                                    steps = {[
-                                        "Formadora",
-                                        2000,
-                                        "Consultora Pedagógica",
-                                        2000
-                                    ]}
-                                    />
+                                    Formadora / Consultora Pedagógica
                                 </h1>
                             </span>
-                            {/* <span className='profile-role-tagline'>
-                                    Isto é a tagline!
-                            </span>*/}
                         </div>
                         <div className='colz'>
                             <div className='colz-icon'>
@@ -54,8 +41,8 @@ function Profile() {
                             smooth={true}
                             duration={500}
                             >
-                            Contact me!
-                            </Link>
+                            <b>Contact me!</b>
+                        </Link>
                         </div>
                     </div>
                 </div>

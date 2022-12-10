@@ -4,7 +4,7 @@ import React from 'react';
 function Contact() {
     return(
         <div className='Contact' id="Contact">
-            aaaaaaaaaaa
+            CONTACT PAGE
         </div>
     )
 }
