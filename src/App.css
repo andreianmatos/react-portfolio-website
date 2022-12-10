@@ -71,7 +71,7 @@ body {
 }
 
 .button-6:active {
-  background-color: #F0F0F1;
+  background-color: #f2ebe5;
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   color: rgba(0, 0, 0, 0.65);
@@ -91,7 +91,7 @@ body {
 .SidebarList {
   height: auto;
   padding: 0;
-  padding-top: 50%;
+  padding-top: 80%;
   width: 100%;
 }
 
