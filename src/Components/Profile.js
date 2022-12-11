@@ -1,7 +1,6 @@
 import React from 'react'
 import '../App.css';
 import { Link } from "react-scroll";
-import Typical from 'react-typical';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Profile() {
