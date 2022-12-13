@@ -9,12 +9,17 @@ function showSidebar() {
     console.log(currentDisplay)
     currentDisplay = !currentDisplay;
     document.getElementById('Sidebar').style.display = currentDisplay ? "block" : "none";
+    document.getElementById('mobile-Sidebar').style.marginLeft = currentDisplay ? "60%" : "0%";
+    document.getElementById('Home').style.pointerEvents = currentDisplay ? "none" : "auto";
+    document.getElementById('About').style.pointerEvents = currentDisplay ? "none" : "auto";
+    document.getElementById('Services').style.pointerEvents = currentDisplay ? "none" : "auto";    
+    document.getElementById('Contact').style.pointerEvents = currentDisplay ? "none" : "auto";
 }
 
 function Sidebar() {
     return(
         <div className='Sidebar'>
-            <div className='mobile-Sidebar'>
+            <div className='mobile-Sidebar' id="mobile-Sidebar">
                 <button
                     className='mobile-Sidebar-btn'
                     onClick={showSidebar}

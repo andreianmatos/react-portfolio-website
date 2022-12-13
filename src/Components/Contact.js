@@ -59,102 +59,84 @@ function Contact() {
       };    
 
   return (
-    <section className="Contact" id="Contact">
+      <section className="Contact" id="Contact">
 
-            <section className="titleContact">
-                <h1 className="display-4 mb-4">Let's talk!</h1>
-            </section>
+        <section className="titleContact">
+          <h1>Let's talk!</h1>
+        </section>
+        
+        <section className="subtitleContact">
+          <address>
+          Don't like forms? Send me an email.
+          <br />
+          <br />
+          <b>Email:</b>{" "}
+          <a href={`mailto:${contactInfo.email}`}>
+              {contactInfo.email}
+          </a>
+          </address>
+        </section>
 
-            <section className="sectionContact">
+      <section className="sectionContact">
 
-                <Row className="leftContact">
-                    <Col lg="5" className="mb-5">
-                        <h3 className="color_sec py-4">Don't like forms?</h3>
-                        <address>
-                        <b>Email:</b>{" "}
-                        <a href={`mailto:${contactInfo.email}`}>
-                            {contactInfo.email}
-                        </a>
-                        <br />
-                        <br />
-                        {contactInfo.hasOwnProperty("phone") ? (
-                            <p>
-                            <b>Phone:</b> {contactInfo.phone}
-                            </p>
-                        ) : (
-                            ""
-                        )}
-                        </address>
-                        <p>{contactInfo.description}</p>
-                    </Col>
-                </Row>
-
-                <Row className="rightContact">
-                    <Col lg="7" className="d-flex align-items-center">
-                    <form id="contact-form" className="contact__form" onSubmit={submitHandler}>
-                <Row>
-                    <Col lg="6" className="form-group">
-                        <input
-                        type="text"
-                        className="form-control"
-                        name="name"
-                        id="InputName"
-                        placeholder="Your name"
-                        onChange={handleChange}
-                        value={formdata.name}
-                        />
-                    </Col>
-                    <Col lg="6" className="form-group">
-                        <input
-                        type="email"
-                        className="form-control"
-                        id="InputEmail"
-                        name="email"
-                        placeholder="Email address"
-                        onChange={handleChange}
-                        value={formdata.email}
-                        />  
-                    </Col>
-                    <Col lg="6" className="form-group">
-                        <input
-                        type="text"
-                        className="form-control"
-                        id="InputSubject"
-                        name="subject"
-                        placeholder="Subject"
-                        onChange={handleChange}
-                        value={formdata.subject}
-                        />
-                    <br /> 
-                    </Col>
-                </Row>
-
-                <textarea
-                      name="message"
-                      id="InputMessage"
-                      className="form-control"
-                      rows="5"
-                      placeholder="Message"
-                      onChange={handleChange}
-                      value={formdata.message}
-                ></textarea>
-                <Row>
-                    <Col lg="12" className="form-group" id="submitContact">
-                    <button
-                        type="submit"
-                        name="submit"
-                        id="submit"
-                        value="Submit"
-                        className="btn button-6"
-                    >
-                        Send
-                    </button>
-                    </Col>
-                </Row>
-                </form>
-                {handleAlerts()}
+          <form id="contact-form" className="contact__form" onSubmit={submitHandler}>
+          <Col className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                id="InputName"
+                placeholder="Your name"
+                onChange={handleChange}
+                value={formdata.name}
+              />
+          </Col>
+          <Col className="form-group">
+              <input
+                type="email"
+                className="form-control"
+                id="InputEmail"
+                name="email"
+                placeholder="Email address"
+                onChange={handleChange}
+                value={formdata.email}
+              />  
+          </Col>
+          <Col className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                id="InputSubject"
+                name="subject"
+                placeholder="Subject"
+                onChange={handleChange}
+                value={formdata.subject}
+                />
+            <br /> 
+          </Col>
+              
+          <textarea
+                name="message"
+                id="InputMessage"
+                className="form-control"
+                rows="5"
+                placeholder="Message"
+                onChange={handleChange}
+                value={formdata.message}
+          ></textarea>
+            <Col className="form-group" id="submitContact">
+            <button
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Submit"
+                className="btn button-6"
+            >
+                Send
+            </button>
             </Col>
-            </Row>
+          </form>
+          {handleAlerts()}
         </section>
     </section>
   );

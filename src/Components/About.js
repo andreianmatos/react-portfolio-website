@@ -4,7 +4,7 @@ import React from 'react';
 function About() {
     return(
         <div className='About' id="About">
-            ABOUT PAGE
+            ABOUT PAGE kjhig
         </div>
     )
 }
